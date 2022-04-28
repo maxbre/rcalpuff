@@ -15,6 +15,9 @@ mapview_grd(file_grd, epsg, string_filename, name_of_map_layer)
 
 \item{name_of_map_layer}{string to name the mapview layer}
 }
+\value{
+mapview object exported as html and png files
+}
 \description{
-Create a mapview from Calpuff grd file, export as html and png
+Create a mapview object from Calpuff grd file and export as html and png files
 }

@@ -12,7 +12,7 @@ export_mapview(map, string_filename)
 \item{string_filename}{string to name the output files}
 }
 \value{
-export html and png files
+mapview object
 }
 \description{
 Export mapview object to html and png

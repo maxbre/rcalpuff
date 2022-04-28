@@ -4,6 +4,7 @@
 #'
 #' @param map mapview object
 #' @param string_filename string to name the output files
+#' @return mapview object
 #' @keywords internal
 
 export_mapview <- function(map, string_filename){
@@ -20,6 +21,6 @@ export_mapview <- function(map, string_filename){
                    file = paste0(string_filename, '.png'),
                    remove_controls = c("zoomControl", "layersControl", "homeButton", "scaleBar"))
 
-  #map
+  map
 
 }

@@ -7,14 +7,14 @@
 read_grd(file_grd, epsg)
 }
 \arguments{
-\item{file_grd}{Calpuff grid file}
+\item{file_grd}{string path to the Calpuff input file name *.grd}
 
-\item{epsg}{EPSG number for setting raster crs}
+\item{epsg}{number epsg to set crs in the raster object}
 }
 \value{
 raster object
 }
 \description{
-Read Calpuff output grid files
+Read Calpuff output grid file
 }
 \keyword{internal}

@@ -1,9 +1,9 @@
 #' read_grd
 #'
-#' Read Calpuff output grid files
+#' Read Calpuff output grid file
 #'
-#' @param file_grd Calpuff grid file
-#' @param epsg EPSG number for setting raster crs
+#' @param file_grd string path to the Calpuff input file name *.grd
+#' @param epsg number epsg to set crs in the raster object
 #' @return raster object
 #' @keywords internal
 
