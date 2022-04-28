@@ -1,8 +1,8 @@
 
-read_grd <- function(file_grd){
+read_grd <- function(file_grd, epsg){
 
   #read grd as raster
-  grd<-raster::raster(file_grd)
+  grd <- raster::raster(file_grd)
 
 
   # define the new extent by applying a transformation factor 10^3 from km to m
@@ -16,8 +16,8 @@ read_grd <- function(file_grd){
 
 
   # epsg 32632
-  crs_string <- "+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs"
-  #crs <- 32632
+  #crs_string <- "+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs"
+  crs_string <- 32632
 
 
   # set raster crs
