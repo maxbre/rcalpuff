@@ -1,11 +1,12 @@
 #' mapview_grd
 #'
-#' Create a mapview from Calpuff grd file, export as html and png
+#' Create a mapview object from Calpuff grd file and export it as html and png files
 #'
 #' @param file_grd string path to the Calpuff input file name *.grd
 #' @param epsg number epsg to set crs in the raster object
 #' @param string_filename string to name the output files
 #' @param name_of_map_layer string to name the mapview layer
+#' @return a mapview object exported as html and png files
 #' @export
 
 mapview_grd <- function(file_grd, epsg, string_filename, name_of_map_layer){
@@ -28,6 +29,8 @@ mapview_grd <- function(file_grd, epsg, string_filename, name_of_map_layer){
 
 
   export_mapview(map, string_filename)
+
+  map
 
 }
 
