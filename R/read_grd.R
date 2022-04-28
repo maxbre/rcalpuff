@@ -17,8 +17,14 @@ read_grd <- function(file_grd, epsg){
 
   # epsg 32632
   #crs_string <- "+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs"
-  crs_string <- 32632
+  #crs_string <- 32632
+  #crs_string <- "EPSG:32632"
+  #crs_string <- sp::CRS(SRS_string = "EPSG:32632") # an sp CRS object
+  #crs_string <- sf::st_crs(32632)$wkt # a WKT string
 
+  # set raster crs
+  #raster::crs(grd) <- crs_string
+  raster::crs(grd) <- epsg
 
   # set raster crs
   raster::crs(grd) <- crs_string
