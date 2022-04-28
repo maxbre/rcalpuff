@@ -9,12 +9,12 @@ mapview_grd(file_grd, epsg, string_filename, name_of_map_layer)
 \arguments{
 \item{file_grd}{string path to the Calpuff input file name *.grd}
 
-\item{epsg}{epsg EPSG number for setting raster crs}
+\item{epsg}{number epsg to set crs in the raster object}
 
 \item{string_filename}{string to name the output files}
 
-\item{name_of_map_layer}{a string to name the layer of the map}
+\item{name_of_map_layer}{string to name the mapview layer}
 }
 \description{
-Create mapview object from Calpuff grd file, export as html and png
+Create a mapview from Calpuff grd file, export as html and png
 }
