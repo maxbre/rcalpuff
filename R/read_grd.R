@@ -5,6 +5,7 @@
 #' @param file_grd Calpuff grid file
 #' @param epsg EPSG number for setting raster crs
 #' @return raster object
+#' @keywords internal
 
 read_grd <- function(file_grd, epsg){
 

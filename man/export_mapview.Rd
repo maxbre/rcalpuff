@@ -17,3 +17,4 @@ export html and png files
 \description{
 Export mapview object to html and png
 }
+\keyword{internal}
