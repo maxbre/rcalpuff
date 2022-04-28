@@ -1,6 +1,6 @@
 #' mapview_grd
 #'
-#' Create mapview object from Calpuff grd file, export as html and png
+#' Create a mapview from Calpuff grd file, export as html and png
 #'
 #' @param file_grd string path to the Calpuff input file name *.grd
 #' @param epsg epsg EPSG number for setting raster crs
@@ -12,7 +12,7 @@ mapview_grd <- function(file_grd, epsg, string_filename, name_of_map_layer){
 
   grd <- read_grd(file_grd, epsg)
 
-  # eventually hardcode the binning
+  # eventually to hardcode the binning in mapview
   #my_bins<-c(0, 1, 2, 3, 4, 5, 10, 100, round(max(raster::values(grd)),0))
   #my_bins<-pretty(range(raster::values(grd)))
 
