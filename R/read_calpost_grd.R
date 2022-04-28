@@ -1,13 +1,13 @@
-#' read_grd
+#' read_calpost_grd
 #'
-#' Read Calpuff output grid file
+#' Read Calpost grid file
 #'
-#' @param file_grd string path to the Calpuff input file name *.grd
+#' @param file_grd string path to Calpost grid file
 #' @param epsg number epsg to set crs in the raster object
 #' @return raster object
 #' @keywords internal
 
-read_grd <- function(file_grd, epsg){
+read_calpost_grd <- function(file_grd, epsg = 32632){
 
   #read grd as raster
   grd <- raster::raster(file_grd)

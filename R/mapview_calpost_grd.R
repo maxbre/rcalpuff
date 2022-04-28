@@ -1,17 +1,17 @@
-#' mapview_grd
+#' mapview_calpost_grd
 #'
-#' Create a mapview object from Calpuff grd file and export as html and png files
+#' Create a mapview object from Calpost grid file and export as html and png files
 #'
-#' @param file_grd string path to the Calpuff input file name *.grd
+#' @param file_grd string path to the Calpost grid file
 #' @param epsg number epsg to set crs in the raster object
 #' @param string_filename string to name the output files
 #' @param name_of_map_layer string to name the mapview layer
 #' @return mapview object exported as html and png files
 #' @export
 
-mapview_grd <- function(file_grd, epsg, string_filename, name_of_map_layer){
+mapview_calpost_grd <- function(file_grd, epsg = 32632, string_filename = ' file_name', name_of_map_layer = 'layer_name'){
 
-  grd <- read_grd(file_grd, epsg)
+  grd <- read_calpost_grd(file_grd, epsg)
 
   # eventually to hardcode the binning in mapview
   #my_bins<-c(0, 1, 2, 3, 4, 5, 10, 100, round(max(raster::values(grd)),0))
@@ -32,7 +32,3 @@ mapview_grd <- function(file_grd, epsg, string_filename, name_of_map_layer){
   export_mapview(map, string_filename)
 
 }
-
-
-
-

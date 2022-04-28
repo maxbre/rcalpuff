@@ -4,7 +4,7 @@
 \alias{export_mapview}
 \title{export_mapview}
 \usage{
-export_mapview(map, string_filename)
+export_mapview(map, string_filename = "file_name")
 }
 \arguments{
 \item{map}{mapview object}
