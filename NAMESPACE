@@ -2,6 +2,7 @@
 
 export("%>%")
 export(mapview_calpost_grd)
+export(mapview_calpuff_terr)
 export(mapview_comp_domain)
 export(mapview_disc_recs)
 export(mapview_emi_points)
