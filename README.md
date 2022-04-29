@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-A collection of my handy R functions for the Calpuff modeling system.
+A collection of my handy R functions for post-processing the output of
+Calpuff modeling system.
 
 Beware: all the material must be considered experimental, in full
 development, not yet tested.
