@@ -41,5 +41,5 @@ vignettes/*.pdf
 .Rdata
 .DS_Store
 
-# my addtion
+# my addition
 old_refs/*
