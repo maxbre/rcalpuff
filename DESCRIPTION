@@ -15,4 +15,5 @@ Imports:
   sf,
   dplyr,
   readr,
-  magrittr
+  magrittr,
+  rfunctions

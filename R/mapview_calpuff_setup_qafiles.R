@@ -16,7 +16,7 @@ mapview_met_domain <- function(qagrid.bna, epsg = 32632, string_filename = 'file
   # mapview
   map <- mapview::mapview(domain, color="green", layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -38,7 +38,7 @@ mapview_comp_domain <- function(qagrid.bna, epsg = 32632, string_filename = 'fil
   # mapview
   map <- mapview::mapview(domain, color="yellow", layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -60,7 +60,7 @@ mapview_samp_domain <- function(qagrid.bna, epsg = 32632, string_filename = 'fil
   # mapview
   map <- mapview::mapview(domain, color="red", layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -82,7 +82,7 @@ mapview_emi_points <- function(qapnts.dat, epsg = 32632, string_filename = 'file
   # mapview
   map <- mapview::mapview(emi_pts_sf, layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -104,7 +104,7 @@ mapview_disc_recs <- function(qarecd.dat, epsg = 32632, string_filename = 'file_
   # mapview
   map <- mapview::mapview(disc_recs_sf, layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -126,7 +126,7 @@ mapview_grid_recs <- function(qarecg.dat, epsg = 32632, string_filename = 'file_
   # mapview
   map <- mapview::mapview(grid_recs_sf, layer.name = name_of_map_layer)
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 
@@ -161,7 +161,7 @@ mapview_calpuff_terr <- function(file_grd, epsg = 32632, string_filename = ' fil
                           layer.name = name_of_map_layer)
 
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }
 

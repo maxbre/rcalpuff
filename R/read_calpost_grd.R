@@ -1,8 +1,8 @@
 #' read_calpost_grd
 #'
-#' Read Calpost grid file
+#' Read CALPOST grid file
 #'
-#' @param file_grd string path to Calpost grid file
+#' @param file_grd string path to CALPOST grid file
 #' @param epsg number epsg to set crs in the raster object
 #' @return raster object
 #' @keywords internal

@@ -29,6 +29,6 @@ mapview_calpost_grd <- function(file_grd, epsg = 32632, string_filename = ' file
                    layer.name = name_of_map_layer)
 
 
-  export_mapview(map, string_filename)
+  rfunctions::export_mapview(map, string_filename)
 
 }

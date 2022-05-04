@@ -7,7 +7,7 @@
 read_calpost_grd(file_grd, epsg = 32632)
 }
 \arguments{
-\item{file_grd}{string path to Calpost grid file}
+\item{file_grd}{string path to CALPOST grid file}
 
 \item{epsg}{number epsg to set crs in the raster object}
 }
@@ -15,6 +15,6 @@ read_calpost_grd(file_grd, epsg = 32632)
 raster object
 }
 \description{
-Read Calpost grid file
+Read CALPOST grid file
 }
 \keyword{internal}
