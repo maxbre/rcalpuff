@@ -7,6 +7,8 @@
 mapview_calpost_grd(
   file_grd,
   epsg = 32632,
+  at = NULL,
+  export = FALSE,
   string_filename = " file_name",
   name_of_map_layer = "layer_name"
 )
@@ -15,6 +17,11 @@ mapview_calpost_grd(
 \item{file_grd}{string path to the Calpost grid file}
 
 \item{epsg}{number epsg to set crs in the raster object}
+
+\item{at}{numeric vector defining breakpoints for the visualization,
+default value is NULL by using continuous 'pretty' breakpoints, see lattice::levelplot function for details}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{string_filename}{string to name the output files}
 

@@ -4,12 +4,20 @@
 #'
 #' @param file_grd string path to the Calpost grid file
 #' @param epsg number epsg to set crs in the raster object
+#' @param at numeric vector defining breakpoints for the visualization,
+#'        default value is NULL by using continuous 'pretty' breakpoints, see lattice::levelplot function for details
+#' @param export logical, export mapview object as hmtl and png files? The default value is equal to FALSE
 #' @param string_filename string to name the output files
 #' @param name_of_map_layer string to name the mapview layer
 #' @return mapview object exported as html and png files
 #' @export
 
-mapview_calpost_grd <- function(file_grd, epsg = 32632, string_filename = ' file_name', name_of_map_layer = 'layer_name'){
+mapview_calpost_grd <- function(file_grd,
+                                epsg = 32632,
+                                at = NULL,
+                                export = FALSE,
+                                string_filename = ' file_name',
+                                name_of_map_layer = 'layer_name'){
 
   grd <- read_calpost_grd(file_grd, epsg)
 
@@ -17,18 +25,24 @@ mapview_calpost_grd <- function(file_grd, epsg = 32632, string_filename = ' file
   #my_bins<-c(0, 1, 2, 3, 4, 5, 10, 100, round(max(raster::values(grd)),0))
   #my_bins<-pretty(range(raster::values(grd)))
 
+  if(!is.null(at)) at=c(at, round(max(raster::values(grd))))
+
   # mapview
   map <- mapview::mapview(grd,
                    # define the palette
                    col.regions = grDevices::colorRampPalette(rev(RColorBrewer::brewer.pal(8, 'RdYlBu'))),
                    # here eventually define the binning
-                   #at = my_bins,
+                   at = at,
                    na.color ='transparent',
                    alpha.region= 0.5,
                    legend.opacity=0.5,
                    layer.name = name_of_map_layer)
 
 
-  rfunctions::export_mapview(map, string_filename)
+  # eventually export the map to hml and png
+  if(export) rfunctions::export_mapview(map, string_filename)
+
+  # and finally return the map
+  map
 
 }
