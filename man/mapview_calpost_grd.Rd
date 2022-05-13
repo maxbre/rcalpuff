@@ -9,12 +9,13 @@ mapview_calpost_grd(
   epsg = 32632,
   at = NULL,
   export = FALSE,
-  string_filename = " file_name",
-  name_of_map_layer = "layer_name"
+  name_of_map_layer = "mapview_layer_name",
+  string_filename = "export_filename",
+  trans_factor = 1
 )
 }
 \arguments{
-\item{file_grd}{string path to the Calpost grid file}
+\item{file_grd}{string path to the CALPOST grid file}
 
 \item{epsg}{number epsg to set crs in the raster object}
 
@@ -23,13 +24,15 @@ default value is NULL by using continuous 'pretty' breakpoints, see lattice::lev
 
 \item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
+\item{name_of_map_layer}{string to name the mapview layer}
+
 \item{string_filename}{string to name the output files}
 
-\item{name_of_map_layer}{string to name the mapview layer}
+\item{trans_factor}{number, transformation factor to be applied to calculated values, leave it as default = 1}
 }
 \value{
 mapview object exported as html and png files
 }
 \description{
-Create a mapview object from Calpost grid file and export as html and png files
+Create a mapview object from CALPOST grid file and export as html and png files
 }
