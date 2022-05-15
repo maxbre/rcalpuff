@@ -2,7 +2,7 @@
 % Please edit documentation in R/mapview_calpost_grd_contour.R
 \name{mapview_calpost_grd_contour}
 \alias{mapview_calpost_grd_contour}
-\title{mapview_calpost_grd_contour}
+\title{Plot contour of CALPOST grid file in mapview}
 \usage{
 mapview_calpost_grd_contour(
   file_grd,

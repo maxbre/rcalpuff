@@ -1,4 +1,4 @@
-#' mapview_calpost_grd_contour
+#' Plot contour of CALPOST grid file in mapview
 #'
 #' Create a mapview contourline object from CALPOST grid file
 #'
