@@ -2,19 +2,22 @@
 % Please edit documentation in R/mapview_calpuff_setup_qafiles.R
 \name{mapview_disc_recs}
 \alias{mapview_disc_recs}
-\title{mapview_disc_recs}
+\title{Mapview CALPUFF discrete receptors}
 \usage{
 mapview_disc_recs(
   qarecd.dat,
   epsg = 32632,
+  export = FALSE,
   string_filename = "file_name_disc_rescs",
   name_of_map_layer = "layer_name_disc_recs"
 )
 }
 \arguments{
-\item{qarecd.dat}{string path to Calpuff setup file discrete receptors qarecd.dat}
+\item{qarecd.dat}{string path to Calpuff setup file discrete receptors 'qarecd.dat'}
 
 \item{epsg}{number epsg to set crs of the discrete receptors}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{string_filename}{string to name the output files}
 
@@ -24,5 +27,5 @@ mapview_disc_recs(
 mapview object exported as html and png files
 }
 \description{
-mapview Calpuff setup discrete receptors
+Create a mapview object from CALPUFF setup discrete receptors file 'qarecd.dat' and eventually export it as html and png files
 }

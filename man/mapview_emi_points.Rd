@@ -2,19 +2,22 @@
 % Please edit documentation in R/mapview_calpuff_setup_qafiles.R
 \name{mapview_emi_points}
 \alias{mapview_emi_points}
-\title{mapview_emi_points}
+\title{Mapview CALPUFF emission points}
 \usage{
 mapview_emi_points(
   qapnts.dat,
   epsg = 32632,
+  export = FALSE,
   string_filename = "file_name_emi_points",
   name_of_map_layer = "layer_name_emi_points"
 )
 }
 \arguments{
-\item{qapnts.dat}{string path to Calpuff setup file emission points qapnts.dat}
+\item{qapnts.dat}{string path to Calpuff setup file emission points 'qapnts.dat'}
 
 \item{epsg}{number epsg to set crs of the emission points}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{string_filename}{string to name the output files}
 
@@ -24,5 +27,5 @@ mapview_emi_points(
 mapview object exported as html and png files
 }
 \description{
-mapview Calpuff setup emission points
+Create a mapview object from CALPUFF setup emission points file 'qapnts.dat' and eventually export it as html and png files
 }

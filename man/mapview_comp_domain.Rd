@@ -2,19 +2,22 @@
 % Please edit documentation in R/mapview_calpuff_setup_qafiles.R
 \name{mapview_comp_domain}
 \alias{mapview_comp_domain}
-\title{mapview_comp_domain}
+\title{Mapview CALPUFF computational domain}
 \usage{
 mapview_comp_domain(
   qagrid.bna,
   epsg = 32632,
+  export = FALSE,
   string_filename = "file_name_comp_domain",
   name_of_map_layer = "layer_name_comp_domain"
 )
 }
 \arguments{
-\item{qagrid.bna}{string path to Calpuff setup file qagrid.bna}
+\item{qagrid.bna}{string path to Calpuff setup file 'qagrid.bna'}
 
 \item{epsg}{number epsg to set crs of the file domain}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{string_filename}{string to name the output files}
 
@@ -24,5 +27,5 @@ mapview_comp_domain(
 mapview object exported as html and png files
 }
 \description{
-mapview Calpuff setup computational domain
+Create a mapview object from CALPUFF setup computational domain file 'qagrid.bna' and eventually export it as html and png files
 }

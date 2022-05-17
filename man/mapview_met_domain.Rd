@@ -2,19 +2,22 @@
 % Please edit documentation in R/mapview_calpuff_setup_qafiles.R
 \name{mapview_met_domain}
 \alias{mapview_met_domain}
-\title{mapview_met_domain}
+\title{Mapview CALPUFF meteorological domain}
 \usage{
 mapview_met_domain(
   qagrid.bna,
   epsg = 32632,
+  export = FALSE,
   string_filename = "file_name_met_domain",
   name_of_map_layer = "layer_name_met_domain"
 )
 }
 \arguments{
-\item{qagrid.bna}{string path to Calpuff setup file qagrid.bna}
+\item{qagrid.bna}{string path to Calpuff setup file 'qagrid.bna'}
 
 \item{epsg}{number epsg to set crs of the file domain}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{string_filename}{string to name the output files}
 
@@ -24,5 +27,5 @@ mapview_met_domain(
 mapview object exported as html and png files
 }
 \description{
-mapview Calpuff setup meteorological domain
+Create a mapview object from CALPUFF setup meteorological domain file 'qagrid.bna' and eventually export it as html and png files
 }

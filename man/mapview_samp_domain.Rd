@@ -2,11 +2,12 @@
 % Please edit documentation in R/mapview_calpuff_setup_qafiles.R
 \name{mapview_samp_domain}
 \alias{mapview_samp_domain}
-\title{mapview_samp_domain}
+\title{Mapview CALPUFF sampling domain}
 \usage{
 mapview_samp_domain(
   qagrid.bna,
   epsg = 32632,
+  export = FALSE,
   string_filename = "file_name_samp_domain",
   name_of_map_layer = "layer_name_samp_domain"
 )
@@ -16,6 +17,8 @@ mapview_samp_domain(
 
 \item{epsg}{number epsg to set crs of the file domain}
 
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
+
 \item{string_filename}{string to name the output files}
 
 \item{name_of_map_layer}{string to name the mapview layer}
@@ -24,5 +27,5 @@ mapview_samp_domain(
 mapview object exported as html and png files
 }
 \description{
-mapview Calpuff setup sampling domain
+Create a mapview object from CALPUFF setup sampling domain file 'qagrid.bna' and eventually export it as html and png files
 }
