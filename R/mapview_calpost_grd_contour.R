@@ -42,7 +42,7 @@ mapview_calpost_grd_contour <- function(file_grd,
 
     } else {
 
-    # here it is not necessary to sort the factor levels, not completely understand that...
+    # apply user defined levels
     grd<-raster::rasterToContour(grd, levels=levels)
 
   }
