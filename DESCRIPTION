@@ -16,4 +16,7 @@ Imports:
   dplyr,
   readr,
   magrittr,
-  rfunctions
+  rfunctions,
+  geosphere,
+  units,
+  sp
