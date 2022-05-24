@@ -1,7 +1,7 @@
-#' Separation distances from contour lines
+#' Calculate separation distances
 #'
 #' Get a a simple feature data frame of separation distances from the source
-#' (origin) point to the concentration contour lines
+#' (origin) point to some predefined concentration contour lines
 #'
 #' @param file_grd string path to the CALPOST grid file
 #' @param epsg number epsg to set crs in the raster object
@@ -13,13 +13,13 @@
 #' @return a simple feature data frame
 #' @export
 
-get_contour_sep_dist <- function(file_grd,
-                                 epsg = 32632,
-                                 x_source,
-                                 y_source,
-                                 levels = NULL,
-                                 degree_step = 5,
-                                 trans_factor = 1){
+get_sep_dist_calpost_grd <- function(file_grd,
+                                    epsg = 32632,
+                                    x_source,
+                                    y_source,
+                                    levels = NULL,
+                                    degree_step = 5,
+                                    trans_factor = 1){
 
 
   # this is for getting rid of mapview warning, not to worry about
@@ -80,12 +80,12 @@ get_contour_sep_dist <- function(file_grd,
                                    b = bearing_angles,
                                    d = dist_orig_contour*100)
 
-  #https://gis.stackexchange.com/questions/312289/r-create-multiple-linestrings-from-multiple-coordinates
+  # https://gis.stackexchange.com/questions/312289/r-create-multiple-linestrings-from-multiple-coordinates
 
   # create dataframe: lon, lat from origin to destination points
   orig_dest_ls_sf<-data.frame(lng_source, lat_source, pts_dest)
 
-  # create helper function for dealing with df by rows
+  # create an helper function for dealing with calculation by rows fo df
   st_segment <- function(r){sf::st_linestring(t(matrix(unlist(r), 2, 2)))}
 
   # add geometry to df
