@@ -1,22 +1,23 @@
-#' get_contour_sep_dist
+#' Separation distances from contour lines
 #'
-#' Get sepration distances from contourlines
+#' Get a a simple feature data frame of separation distances from the source
+#' (origin) point to the concentration contour lines
 #'
 #' @param file_grd string path to the CALPOST grid file
 #' @param epsg number epsg to set crs in the raster object
-#' @param levels vector of the levels for the contourplot
 #' @param x_source x coordinates of the source (origin) point
 #' @param y_source y coordinates of the source (origin) point
-#' @param degree_step amplitude of angle degrees to scan direction
+#' @param levels vector of defined levels for the contour lines
+#' @param degree_step angle degree to scan directions where calculate distances from source (origin) point
 #' @param trans_factor number, transformation factor to be applied to calculated values, leave it as default = 1
-#' @return df
+#' @return a simple feature data frame
 #' @export
 
 get_contour_sep_dist <- function(file_grd,
                                  epsg = 32632,
+                                 x_source,
+                                 y_source,
                                  levels = NULL,
-                                 x_source = 738259,
-                                 y_source = 5073666,
                                  degree_step = 5,
                                  trans_factor = 1){
 

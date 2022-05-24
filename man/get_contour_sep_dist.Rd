@@ -2,14 +2,14 @@
 % Please edit documentation in R/get_contour_sep_distance.R
 \name{get_contour_sep_dist}
 \alias{get_contour_sep_dist}
-\title{get_contour_sep_dist}
+\title{Separation distances from contour lines}
 \usage{
 get_contour_sep_dist(
   file_grd,
   epsg = 32632,
+  x_source,
+  y_source,
   levels = NULL,
-  x_source = 738259,
-  y_source = 5073666,
   degree_step = 5,
   trans_factor = 1
 )
@@ -19,19 +19,20 @@ get_contour_sep_dist(
 
 \item{epsg}{number epsg to set crs in the raster object}
 
-\item{levels}{vector of the levels for the contourplot}
-
 \item{x_source}{x coordinates of the source (origin) point}
 
 \item{y_source}{y coordinates of the source (origin) point}
 
-\item{degree_step}{amplitude of angle degrees to scan direction}
+\item{levels}{vector of defined levels for the contour lines}
+
+\item{degree_step}{angle degree to scan directions where calculate distances from source (origin) point}
 
 \item{trans_factor}{number, transformation factor to be applied to calculated values, leave it as default = 1}
 }
 \value{
-df
+a simple feature data frame
 }
 \description{
-Get sepration distances from contourlines
+Get a a simple feature data frame of separation distances from the source
+(origin) point to the concentration contour lines
 }
