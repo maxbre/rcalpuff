@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/maxbre/rcalpuff/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/maxbre/rcalpuff/actions/workflows/R-CMD-check.yaml)
+[![CodeFactor](https://www.codefactor.io/repository/github/maxbre/rcalpuff/badge/main)](https://www.codefactor.io/repository/github/maxbre/rcalpuff/overview/main)
 [![](https://img.shields.io/badge/devel%20version-0.0.1-blue.svg)](https://github.com/maxbre/rcalpuff)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/languages/code-size/maxbre/rcalpuff.svg)](https://github.com/maxbre/rcalpuff)
