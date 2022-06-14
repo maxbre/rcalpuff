@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # rcalpuff
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/maxbre/rcalpuff/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/maxbre/rcalpuff/actions/workflows/R-CMD-check.yaml)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/maxbre/rcalpuff/badge)](https://www.codefactor.io/repository/github/maxbre/rcalpuff)
