@@ -38,10 +38,10 @@ read_qagrid_bna <- function(qagrid.bna, epsg = 32632, skip, n_max){
 
 read_qapnts_dat <- function(qapnts.dat, epsg = 32632){
 
-  x <- y <- elev <- source <- NULL
+  x <- y <- elev <- emi_source <- NULL
 
   # emission points
-  emi_pts <- readr::read_table(qapnts.dat, skip= 1, col_names=c("x", "y", "elev", "source"), show_col_types = FALSE)%>%
+  emi_pts <- readr::read_table(qapnts.dat, skip= 1, col_names=c("x", "y", "elev", "emi_source"), show_col_types = FALSE)%>%
     dplyr::mutate(x = x*1000, y = y*1000)
 
   # transform df to sf
