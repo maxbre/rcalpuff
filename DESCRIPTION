@@ -23,4 +23,5 @@ Imports:
   rfunctions,
   geosphere,
   units,
-  sp
+  sp,
+  withr

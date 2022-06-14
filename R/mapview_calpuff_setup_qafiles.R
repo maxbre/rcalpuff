@@ -17,7 +17,7 @@ mapview_met_domain <- function(qagrid.bna,
                                name_of_map_layer = 'layer_name_met_domain'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   domain <- read_qagrid_bna(qagrid.bna, epsg = epsg, skip = 1, n_max = 5)
 
@@ -50,7 +50,7 @@ mapview_comp_domain <- function(qagrid.bna,
                                 name_of_map_layer = 'layer_name_comp_domain'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   domain <- read_qagrid_bna(qagrid.bna, epsg = epsg, skip = 7, n_max = 5)
 
@@ -82,7 +82,7 @@ mapview_samp_domain <- function(qagrid.bna,
                                 name_of_map_layer = 'layer_name_samp_domain'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   domain <- read_qagrid_bna(qagrid.bna, epsg = epsg, skip = 13, n_max = 5)
 
@@ -114,7 +114,7 @@ mapview_emi_points <- function(qapnts.dat,
                                name_of_map_layer = 'layer_name_emi_points'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   emi_pts_sf <- read_qapnts_dat(qapnts.dat, epsg = epsg)
 
@@ -146,7 +146,7 @@ mapview_disc_recs <- function(qarecd.dat,
                               name_of_map_layer = 'layer_name_disc_recs'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   # note here suppressing warning of parsing failure number of columns expected
   # it is something related to the function read_qarecd.dat
@@ -180,7 +180,7 @@ mapview_grid_recs <- function(qarecg.dat,
                               name_of_map_layer = 'layer_name_grid_recs'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   # note here suppressing warning of parsing failure number of columns expected
   # it is something related to the function read_qarecg.dat
@@ -214,7 +214,7 @@ mapview_terr_grd <- function(qaterr.grd,
                                  string_filename = ' file_name_grid_terr'){
 
   # get rid of mapview warning message
-  options(rgdal_show_exportToProj4_warnings = "none")
+  withr::with_options(rgdal_show_exportToProj4_warnings = "none")
 
   # read grid
   grd <- read_qaterr_grd(qaterr.grd, epsg)
