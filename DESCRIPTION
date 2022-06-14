@@ -19,5 +19,4 @@ Imports:
   rfunctions,
   geosphere,
   units,
-  sp,
-  rfunctions
+  sp
