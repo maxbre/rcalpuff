@@ -13,6 +13,7 @@
 [![Project Status: WIP - Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 <!-- badges: end -->
 
 A collection of my handy R functions for post-processing the output of
@@ -31,16 +32,4 @@ the repository at [GitHub](https://github.com/maxbre/rcalpuff/) with:
 ``` r
 if(!require("devtools")) install.packages("devtools")
 devtools::install_github("maxbre/rcalpuff")
-```
-
-### Pay attention!
-
-This package is dependent by some functions provided by another package
-(of mine), that needs to be installed first!
-
-So, here again, it goes like:
-
-``` r
-if(!require("devtools")) install.packages("devtools")
-devtools::install_github("maxbre/rfunctions")
 ```
