@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# rcalpuff
+# rcalpuff <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
